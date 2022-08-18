@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import styled from 'styled-components';
+import LogoComponent from "../subComponents/Logo";
 
 // STYLED COMPONENTS 
 const MainContainer = styled(motion.div)`
@@ -24,7 +25,7 @@ z-index: 0;
 border-radius: 0px;
 `;
 
-const Main = () => {
+const MainContent = () => {
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -34,6 +35,7 @@ const Main = () => {
 
     return (
         <MainContainer>
+            
             <ProgressBar
             style={{ scaleX }}
             />
@@ -42,4 +44,4 @@ const Main = () => {
     );
 }
 
-export default Main;
+export default MainContent;
