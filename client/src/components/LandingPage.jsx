@@ -11,7 +11,7 @@ const PageContainer = styled(motion.div)`
 `;
 
 const LandingContainer = styled(motion.div )`
-z-index: 0;
+z-index: 3;
 background: #007859;
 width: 100vw;
 height: 100vh;
@@ -77,10 +77,8 @@ const LandingPage = () => {
 
     return (
         <PageContainer>
-            
-            
-
-            <Center style={{top: click ? '87%' : '50%', left: click ? '92%' : '50%',}} initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{duration: 0.05}}>
+            <FeatherParticles/>
+            <Center style={{top: click ? '87%' : '50%', left: click ? '91%' : '50%',}} initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{duration: 0.05}}>
                 <GreenBird style={{cursor:'pointer', transition: '1.1s ease-out'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} 
                 height={click ? 'min(12vw, 13vh)' : 'max(14vw, 20vh)'} alt='clickable green bird icon'/><span style={{color:'#fff', display: click ? 'none' : 'block'}}>click me ↑</span>
             </Center>
@@ -89,12 +87,11 @@ const LandingPage = () => {
                 {!click && (<LandingContainer key="box" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{duration: 1}}/>)}
             </AnimatePresence>
 
+            <AnimatePresence>
+                <MainContent isVisible={click}/>
+            </AnimatePresence>
 
-
-            <MainContent/>
             
-
-            <FeatherParticles/>
         </PageContainer>
     );
 }

@@ -17,7 +17,8 @@ const FeatherParticles = () => {
     }, []);
 
     return (
-        <Particles 
+        <Particles
+        style={{zIndex:100}}
         id="tsparticles" 
         init={particlesInit}
         loaded={particlesLoaded}

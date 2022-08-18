@@ -56,6 +56,23 @@ export const GreenBird = (props) => {
   )
 }
 
+export const DarkCloud = (props) => (
+  <svg
+
+    style={{
+      enableBackground: "new 0 0 465 465",
+    }}
+    xmlSpace="preserve"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M3891.45 2312H1039.2c-1548.042 0-1289.103-1956.369 263.58-1522.564 0-1086.361 2329.61-1086.361 2329.61 217.554C4927.44 789.436 4927.44 2311.9 3891.45 2311.9v.1Z"
+      fill="#132B35"
+    />
+  </svg>
+)
 
 export const Linkedin = (props) => {
   return(
