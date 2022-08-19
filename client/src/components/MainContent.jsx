@@ -49,7 +49,7 @@ width: 70vw;
 height: 50vh;
 z-index: 8;
 font-family: 'Source Sans Pro', sans-serif;
-font-size: calc(0.2em + 2.3vmax);
+font-size: calc(0.2em + 2.2vmax);
 color: white;
 
 
@@ -106,9 +106,9 @@ const MainContent = (props) => {
             }}
             exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 2} }}>
                 <AboutContent>
-                    <h5>Kia Ora,</h5>
-                    <h1>I'm Eugene. I code, read, game, and nerd out over tech!</h1>
-                    <h5 style={{ marginTop: '2vmax'}}>I study software engineering  @ the University of Auckland.</h5>
+                    <h5>Kia Ora ✨,</h5>
+                    <h1>I'm Eugene. I code, read, game, and sometimes kill houseplants.</h1>
+                    <h5 style={{ marginTop: '2vmax'}}>I currently study software engineering  @ the University of Auckland.</h5>
                     <h5 style={{ marginTop: '0.7vmax'}}>I’m a budding effective altruist who <motion.button style={{color:'red', background: 'none', border: 'none', fontSize: 'calc(0.8em + 0.5vw)'}} whileHover={{ color: '#007859', scale: [null, 1.5, 1.3], transition:{duration:0.3} }}>❤</motion.button> plants, books, and tech among a great many other things!</h5>
                 </AboutContent>
             </AboutSection>)}

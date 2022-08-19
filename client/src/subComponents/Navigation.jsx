@@ -5,16 +5,17 @@ import ScrollIntoView from 'react-scroll-into-view';
 
 const NavBox = styled(motion.div)`
 display: flex;
+align-items: flex-end;
 gap: calc(0.1rem + 4vw);
 position: fixed;
-top: 6.35%;
+top: 6%;
 right: 5%;
 z-index: 10;
-height: calc(1.25rem + 0.5vw);
+height: calc(0.8rem + 1vmax);
 
 button:hover {
     color: #C2DC71;
-    text-decoration: underline wavy 1px;
+    text-decoration: underline wavy 0.1vmax;
 }
 `;
 
@@ -22,6 +23,7 @@ const NavButton = styled(motion.button)`
 background: none;
 border: none;
 padding: 0;
+margin: 0;
 cursor: pointer;
 color: #ffffff;
 font-family: 'Press Start 2P', cursive;

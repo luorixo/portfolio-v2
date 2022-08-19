@@ -16,7 +16,7 @@ color: #ffffff;
 font-family: 'Press Start 2P', cursive;
 font-size: calc(0.2em + 1.5vmax);
 text-shadow:  0.25vmax 0.2vmax #132B35;
-height: calc(1.25rem + 0.5vw);
+height: calc(0.8rem + 1vmax);
 `
 
 const LogoComponent = (props) => {
