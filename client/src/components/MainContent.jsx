@@ -6,6 +6,7 @@ import NavigationComponent from "../subComponents/Navigation";
 import ScrollIntoView from 'react-scroll-into-view';
 import { DarkCloud, GreenBird } from "../subComponents/AllSvgs";
 import { AnimatePresence } from "framer-motion";
+import SocialIcons from "../subComponents/SocialIcons";
 
 // STYLED COMPONENTS 
 const MainContainer = styled(motion.div)`
@@ -52,17 +53,23 @@ font-family: 'Source Sans Pro', sans-serif;
 font-size: calc(0.2em + 2.2vmax);
 color: white;
 
-
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin:0;
     font-weight: 400;
 }
-
 h1 {
     line-height: 1.2;
     font-weight: 800;
     text-shadow:  0.3vmax 0.2vmax #132B35;
+}
+a {
+    color: #fff;
+    text-decoration: dotted;
+    font-weight: 800;
+}
+a:hover {
+    color: #C2DC71;
 }
 
 `;
@@ -90,26 +97,27 @@ const MainContent = (props) => {
 
     return (
         <MainContainer>
+            <SocialIcons/>
             <NavigationComponent isVisible={props.isVisible} about={navnames.about} projects={navnames.projects} blog={navnames.blog}/>
             <ScrollIntoView selector={"#"+navnames.about}><LogoComponent isVisible={props.isVisible} key="box" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{duration: 1}}/></ScrollIntoView>
 
             <AnimatePresence>
             {(props.isVisible &&<AboutSection id={navnames.about} initial={{
-                y:-100,
+                x:-100,
                 opacity: 0,
                 transition: { type:'spring', duration: 2}
             }}
             animate={{
-                y:0,
+                x:0,
                 opacity: 1,
-                transition: { type:'spring', bounce:0.6, duration: 2, delay: 0}
+                transition: { type:'spring', duration: 2, delay: 0}
             }}
-            exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 2} }}>
+            exit={{ x:-50, opacity: 0, transition: { type:'spring', duration: 1.1} }}>
                 <AboutContent>
                     <h5>Kia Ora ✨,</h5>
                     <h1>I'm Eugene. I code, read, game, and sometimes kill houseplants.</h1>
                     <h5 style={{ marginTop: '2vmax'}}>I currently study software engineering  @ the University of Auckland.</h5>
-                    <h5 style={{ marginTop: '0.7vmax'}}>I’m a budding effective altruist who <motion.button style={{color:'red', background: 'none', border: 'none', fontSize: 'calc(0.8em + 0.5vw)'}} whileHover={{ color: '#007859', scale: [null, 1.5, 1.3], transition:{duration:0.3} }}>❤</motion.button> plants, books, and tech among a great many other things!</h5>
+                    <h5 style={{ marginTop: '0.7vmax'}}>I’m a budding <form style={{padding: 0, margin:0, display: "inline-block"}} action="https://www.effectivealtruism.org/" target="_blank"><motion.button style={{color:'white', background: 'none', border: 'none', fontSize: '1.9vmax', fontWeight: '800', cursor: 'pointer'}} whileHover={{ scale: [null, 1.1, 1.05], transition:{duration:0.3} }} type="submit">effective altruist</motion.button></form> who <motion.button style={{color:'red', background: 'none', border: 'none', fontSize: 'calc(0.8em + 0.5vw)'}} whileHover={{ color: '#007859', scale: [null, 1.5, 1.3], transition:{duration:0.3} }}>❤</motion.button> plants, books, and tech among a great many other things!</h5>
                 </AboutContent>
             </AboutSection>)}
             </AnimatePresence>
