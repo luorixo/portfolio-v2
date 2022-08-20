@@ -6,7 +6,7 @@ import ScrollIntoView from 'react-scroll-into-view';
 const NavBox = styled(motion.div)`
 display: flex;
 align-items: flex-end;
-gap: calc(0.1rem + 4vw);
+gap: calc(0.0rem + 4vw);
 position: fixed;
 top: 6%;
 right: 5%;
@@ -28,7 +28,7 @@ cursor: pointer;
 color: #ffffff;
 font-family: 'Press Start 2P', cursive;
 font-size: calc(0.2em + 1vmax);
-text-shadow:  0.25vmax 0.2vmax #132B35;
+text-shadow:  0.25vmax 0.2vmax 0.1vmax #132B35;
 `;
 
 const Bold = styled(motion.text)`

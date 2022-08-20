@@ -7,6 +7,7 @@ import ScrollIntoView from 'react-scroll-into-view';
 import { DarkCloud, GreenBird } from "../subComponents/AllSvgs";
 import { AnimatePresence } from "framer-motion";
 import SocialIcons from "../subComponents/SocialIcons";
+import FooterComponent from "../subComponents/Footer";
 
 // STYLED COMPONENTS 
 const MainContainer = styled(motion.div)`
@@ -26,7 +27,7 @@ height: 1vh;
 width: 100vw;
 background: #007859;
 transform-origin: 0%;
-z-index: 0;
+z-index: 10;
 border-radius: 0px;
 `;
 
@@ -50,7 +51,7 @@ width: 70vw;
 height: 50vh;
 z-index: 8;
 font-family: 'Source Sans Pro', sans-serif;
-font-size: calc(0.2em + 2.2vmax);
+font-size: calc(0.2em + 2.1vmax);
 color: white;
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     line-height: 1.2;
     font-weight: 800;
-    text-shadow:  0.3vmax 0.2vmax #132B35;
+    text-shadow:  0.3vmax 0.2vmax 0.1vmax #132B35;
 }
 a {
     color: #fff;
@@ -71,7 +72,50 @@ a {
 a:hover {
     color: #C2DC71;
 }
+`;
 
+const ProjectSection = styled(motion.div)`
+bottom: 0;
+left: 0;
+right: 0;
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+
+const ProjectContent = styled(motion.div)`
+display: flex;
+//background-color: beige;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+width: 70vw;
+height: 50vh;
+z-index: 8;
+font-family: 'Source Sans Pro', sans-serif;
+font-size: calc(0.2em + 2.2vmax);
+color: white;
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin:0;
+    font-weight: 400;
+}
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(0.2em + 1.5vmax);
+    text-shadow:  0.25vmax 0.2vmax 0.1vmax #132B35;
+}
+a {
+    color: #fff;
+    text-decoration: dotted;
+    font-weight: 800;
+}
+a:hover {
+    color: #C2DC71;
+}
 `;
 
 const CloudBox1 = styled(motion.div)`
@@ -122,6 +166,26 @@ const MainContent = (props) => {
             </AboutSection>)}
             </AnimatePresence>
 
+            <AnimatePresence>
+            {(props.isVisible &&<ProjectSection id={navnames.projects} initial={{
+                x:-100,
+                opacity: 0,
+                transition: { type:'spring', duration: 2}
+            }}
+            animate={{
+                x:0,
+                opacity: 1,
+                transition: { type:'spring', duration: 2, delay: 0}
+            }}
+            exit={{ x:-50, opacity: 0, transition: { type:'spring', duration: 1.1} }}>
+                <ProjectContent>
+                    <h1>✨ some of my projects ✨</h1>
+                    
+                </ProjectContent>
+            </ProjectSection>)}
+            </AnimatePresence>
+
+
             {/*<CloudBox1>
             <DarkCloud width={'50vh'} height={'50vh'}/>
             </CloudBox1>*/}
@@ -133,6 +197,7 @@ const MainContent = (props) => {
             style={{ scaleX }}
             />
             <div>yoyoyo</div>
+            <FooterComponent isVisible={props.isVisible}/>
         </MainContainer>
     );
 }

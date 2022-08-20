@@ -80,7 +80,7 @@ const LandingPage = () => {
             <FeatherParticles/>
             <Center style={{top: click ? '87%' : '50%', left: click ? '91%' : '50%',}} initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{duration: 0.05}}>
                 <GreenBird style={{cursor:'pointer', transition: '1.1s ease-out'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} 
-                height={click ? 'min(12vw, 13vh)' : 'max(14vw, 20vh)'} alt='clickable green bird icon'/><span style={{color:'#fff', display: click ? 'none' : 'block'}}>click me ↑</span>
+                height={click ? 'min(12vw, 13vh)' : 'max(14vw, 20vh)'} alt='clickable green bird icon'/><span style={{color:'#fff', display: click ? 'none' : 'block', fontFamily: '"Press Start 2P", cursive', fontSize: '0.9vmax'}}>click me ↑</span>
             </Center>
             
             <AnimatePresence>

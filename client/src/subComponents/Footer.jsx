@@ -3,29 +3,35 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
-const Logo = styled(motion.button)`
+const FooterSection = styled(motion.div)`
+z-index: 10 !important;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 10vmax;
+`
+
+const Text = styled(motion.button)`
 background: none;
 border: none;
 padding: 0;
 cursor: pointer;
-position: fixed;
 z-index: 10 !important;
 top: 6%;
 left: 5%;
-color: #ffffff;
-font-family: 'Press Start 2P', cursive;
-font-size: calc(0.2em + 1.5vmax);
-text-shadow:  0.25vmax 0.2vmax 0.1vmax #132B35;
+color: #132B35;
+font-family: 'Source Sans Pro', sans-serif;
+font-size: calc(0.2em + 1.2vmax);
 height: calc(0.8rem + 1vmax);
 `
 
-const LogoComponent = (props) => {
+const FooterComponent = (props) => {
     return (
+        <FooterSection>
         <AnimatePresence>
             {(props.isVisible &&
-            <Logo
-            whileHover={{ scale: [null, 1.15, 1.1] }}
-            whileTap={{scale: 0.85}}
+            <Text
+            whileHover={{ scale: [null, 1.1, 1.05] }}
             transition={{ duration: 0.3}}
             initial={{
                 y:-100,
@@ -39,11 +45,12 @@ const LogoComponent = (props) => {
             }}
             exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 1.5} }}
             >
-                echua.top
-            </Logo>
+                Coded by me! &nbsp; | &nbsp; Made w/ React + Framer Motion &nbsp; | &nbsp; <b>Eugene Chua</b> - 2022
+            </Text>
             )}
         </AnimatePresence>
+        </FooterSection>
     )
 }
 
-export default LogoComponent;
+export default FooterComponent;

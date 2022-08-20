@@ -11,7 +11,7 @@ align-items: center;
 position: fixed;
 bottom: 0;
 left: 5%;
-z-index: 10;
+z-index: 8;
 
 &>*:not(:last-child) {
     margin-bottom: 1.25vmax;
