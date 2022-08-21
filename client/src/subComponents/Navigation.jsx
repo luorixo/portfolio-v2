@@ -49,7 +49,7 @@ const NavigationComponent = (props) => {
             animate={{
                 y:0,
                 opacity: 1,
-                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.15}
+                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.2}
             }}
             exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 1.5} }}>
                 <Bold>➽</Bold>me</NavButton></ScrollIntoView>)}
@@ -65,7 +65,7 @@ const NavigationComponent = (props) => {
             animate={{
                 y:0,
                 opacity: 1,
-                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.3}
+                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.4}
             }}
             exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 1.5} }}>
                 <Bold>➽</Bold>projects</NavButton></ScrollIntoView>)}
@@ -81,7 +81,7 @@ const NavigationComponent = (props) => {
             animate={{
                 y:0,
                 opacity: 1,
-                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.45}
+                transition: { type:'spring', bounce:0.6, duration: 1.75, delay: 0.6}
             }}
             exit={{ y:-100, opacity: 0, transition: { type:'spring', duration: 1.5} }}>
                 <Bold>➽</Bold>blog</NavButton></ScrollIntoView>)}

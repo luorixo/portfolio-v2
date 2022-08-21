@@ -10,17 +10,18 @@ flex-direction: column;
 align-items: center;
 position: fixed;
 bottom: 0;
-left: 5%;
+left: 4%;
 z-index: 8;
 
 &>*:not(:last-child) {
-    margin-bottom: 1.25vmax;
+    margin-bottom: 1.2vmax;
 }
 `
 const Line = styled(motion.span)`
 width: max(0.2vw, 0.2vh);
 transition: ease-out 0.4s;
-height: 5vmax;
+height: 2vh;
+width: 3.8vmax;
 background-color: #132B35;
 opacity: 1;
 `

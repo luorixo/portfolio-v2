@@ -167,11 +167,7 @@ const MainContent = (props) => {
             </AnimatePresence>
 
             <AnimatePresence>
-            {(props.isVisible &&<ProjectSection id={navnames.projects} initial={{
-                x:-100,
-                opacity: 0,
-                transition: { type:'spring', duration: 2}
-            }}
+            {(props.isVisible &&<ProjectSection id={navnames.projects} 
             animate={{
                 x:0,
                 opacity: 1,
@@ -180,6 +176,8 @@ const MainContent = (props) => {
             exit={{ x:-50, opacity: 0, transition: { type:'spring', duration: 1.1} }}>
                 <ProjectContent>
                     <h1>✨ some of my projects ✨</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>•︿• UNDER CONSTRUCTION •︿•</h1>
                     
                 </ProjectContent>
             </ProjectSection>)}
@@ -190,13 +188,11 @@ const MainContent = (props) => {
             <DarkCloud width={'50vh'} height={'50vh'}/>
             </CloudBox1>*/}
 
-            <div style={{ height: '100vh' }}/>
-      
-            <div style={{ height: '100vh' }}/> 
+            
             <ProgressBar
             style={{ scaleX }}
             />
-            <div>yoyoyo</div>
+            <div></div>
             <FooterComponent isVisible={props.isVisible}/>
         </MainContainer>
     );
