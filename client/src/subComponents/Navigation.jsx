@@ -15,7 +15,7 @@ height: calc(0.8rem + 1vmax);
 
 button:hover {
     color: #C2DC71;
-    text-decoration: underline wavy 0.1vmax;
+    //text-decoration: underline wavy 0.1vmax;
 }
 `;
 
