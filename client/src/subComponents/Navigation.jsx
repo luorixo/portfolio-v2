@@ -23,6 +23,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, 0);
     justify-content: center;
+    gap: calc(0.0rem + 8vw);
 }
 `;
 
