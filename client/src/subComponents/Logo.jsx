@@ -7,6 +7,7 @@ const Logo = styled(motion.button)`
 background: none;
 border: none;
 padding: 0;
+margin: 0;
 cursor: pointer;
 position: fixed;
 z-index: 10 !important;
@@ -17,6 +18,10 @@ font-family: 'Press Start 2P', cursive;
 font-size: calc(0.2em + 1.5vmax);
 text-shadow:  0.25vmax 0.2vmax 0.1vmax #132B35;
 height: calc(0.8rem + 1vmax);
+
+@media (max-width: 470px) {
+    display: none;
+}
 `
 
 const LogoComponent = (props) => {

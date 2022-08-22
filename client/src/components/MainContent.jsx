@@ -44,7 +44,6 @@ align-items: center;
 
 const AboutContent = styled(motion.div)`
 display: flex;
-//background-color: beige;
 flex-direction: column;
 justify-content: center;
 width: 70vw;
@@ -142,6 +141,7 @@ const MainContent = (props) => {
     return (
         <MainContainer>
             <SocialIcons isVisible={props.isVisible}/>
+            
             <NavigationComponent isVisible={props.isVisible} about={navnames.about} projects={navnames.projects} blog={navnames.blog}/>
             <ScrollIntoView selector={"#"+navnames.about}><LogoComponent isVisible={props.isVisible} key="box" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{duration: 1}}/></ScrollIntoView>
 

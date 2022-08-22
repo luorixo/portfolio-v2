@@ -17,6 +17,13 @@ button:hover {
     color: #C2DC71;
     //text-decoration: underline wavy 0.1vmax;
 }
+
+@media (max-width: 470px) {
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    justify-content: center;
+}
 `;
 
 const NavButton = styled(motion.button)`
