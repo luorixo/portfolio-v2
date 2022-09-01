@@ -14,8 +14,23 @@ const MainContainer = styled(motion.div)`
 z-index: 2;
 background: rgb(255,255,255);
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(75,153,186,1) 100%); 
+background: linear-gradient(27deg, #fff, #4B99BA, #d9ce8d);
+background-size: 250% 250%;
+animation: gradient 7s ease infinite;
 width: 100vw;
 min-height: 100vh;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 `;
 
 const ProgressBar = styled(motion.div)`
