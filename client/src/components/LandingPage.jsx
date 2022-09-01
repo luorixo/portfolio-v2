@@ -18,6 +18,21 @@ height: 100vh;
 overflow: hidden;
 position: fixed;
 z-index: 0;
+
+background: linear-gradient(30deg, #007859 50%, #dedf8d);
+background-size: 300% 300%;
+animation: gradient 18s ease infinite;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 `;
 
 const bounce = keyframes`
