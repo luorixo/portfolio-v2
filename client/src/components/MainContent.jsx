@@ -51,6 +51,10 @@ font-family: 'Source Sans Pro', sans-serif;
 font-size: calc(0.2em + 2.1vmax);
 color: white;
 
+b{
+    
+}
+
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin:0;
@@ -58,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 900;
     text-shadow:  0.3vmax 0.2vmax 0.1vmax #132B35;
 }
 a {
@@ -157,7 +161,7 @@ const MainContent = (props) => {
             exit={{ x:-50, opacity: 0, transition: { type:'spring', duration: 1.1} }}>
                 <AboutContent>
                     <h5>Kia Ora ✨,</h5>
-                    <h1>I'm Eugene. I code, read, game, and sometimes kill houseplants.</h1>
+                    <h1><b>I'm Eugene.</b> I code, read, game, and accidently kill houseplants.</h1>
                     <h5 style={{ marginTop: '2vmax'}}>I currently study software engineering  @ the University of Auckland.</h5>
                     <h5 style={{ marginTop: '0.7vmax'}}>I’m a budding <form style={{padding: 0, margin:0, display: "inline-block"}} action="https://www.effectivealtruism.org/" target="_blank"><motion.button style={{color:'white', background: 'none', border: 'none', fontSize: '1.9vmax', fontWeight: '800', cursor: 'pointer'}} whileHover={{ scale: [null, 1.1, 1.05], transition:{duration:0.3} }} type="submit">effective altruist</motion.button></form> who <motion.button style={{color:'red', background: 'none', border: 'none', fontSize: 'calc(0.8em + 0.5vw)'}} whileHover={{ color: '#007859', scale: [null, 1.5, 1.3], transition:{duration:0.3} }}>❤</motion.button> plants, books, and tech among a great many other things!</h5>
                 </AboutContent>

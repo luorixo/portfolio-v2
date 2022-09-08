@@ -21,7 +21,7 @@ top: 6%;
 left: 5%;
 color: #132B35;
 font-family: 'Source Sans Pro', sans-serif;
-font-size: calc(0.2em + 1.2vmax);
+font-size: calc(0.8vmax + 0.6vw);
 height: calc(0.8rem + 1vmax);
 `
 
